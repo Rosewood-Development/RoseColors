@@ -1,0 +1,4 @@
+name: RoseColors
+main: dev.rosewood.rosecolors.RoseColorsBungee
+version: '@version@'
+author: Esophose

@@ -1,0 +1,48 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+group = 'dev.esophose'
+version = '1.5'
+
+repositories {
+    mavenCentral()
+	jcenter()
+
+    maven { url = 'https://repo.rosewooddev.io/repository/public/' }
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url = 'http://repo.extendedclip.com/content/repositories/placeholderapi/' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot:1.16.4'
+    compileOnly 'net.md-5:bungeecord-api:1.16-R0.5-SNAPSHOT'
+    compileOnly 'me.clip:placeholderapi:2.10.9'
+}
+
+compileJava {
+    options.compilerArgs += ['-parameters']
+    options.fork = true
+    options.forkOptions.executable = 'javac'
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    from (sourceSets.main.resources.srcDirs) {
+        include '**/*.yml'
+        filter ReplaceTokens, tokens: ["version": project.property("version")]
+    }
+}
+
+shadowJar {
+    archiveClassifier.set(null)
+    minimize()
+}
+
+build.dependsOn shadowJar

@@ -1,0 +1,24 @@
+name: RoseColors
+main: dev.rosewood.rosecolors.RoseColors
+version: '@version@'
+api-version: '1.16'
+description: Hex color utilities and MOTD customizer
+author: Esophose
+softdepend: [PlaceholderAPI]
+commands:
+  gradient:
+    description: Displays information for a gradient
+    permission: rosecolors.use
+  rainbow:
+    description: Displays information for a rainbow
+    permission: rosecolors.use
+  parsecolors:
+    description: Parses a message using HexUtils
+    permission: rosecolors.use
+  rosecolorsreload:
+    description: Reloads the config
+    permission: rosecolors.use
+permissions:
+  rosecolors.use:
+    description: Allows using the RoseColors commands
+    default: op

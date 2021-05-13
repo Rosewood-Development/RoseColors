@@ -1,0 +1,18 @@
+prefix: '&7[<g:#8A2387:#E94057:#F27121>Rose<r:0.5>Colors&7] '
+gradient-usage: '<g:#FF664E:#BB1900>/gradient <#hex123:#hex456> <Your Test Text>'
+gradient-min: '<g:#FF664E:#BB1900>Must use at least 2 gradient colors.'
+gradient-invalid: '<g:#FF664E:#BB1900>Invalid hex codes were supplied.'
+rainbow-usage: '<g:#FF664E:#BB1900>/rainbow [saturation(0-1):lightness(0-1)] <Your Test Text>'
+reloaded: '<r#5:0.3>The plugin config has been reloaded.'
+no-permission: '<g:#FF664E:#BB1900>You do not have permission to use that!'
+
+# Set to true to actually use the below motd settings
+change-motd: false
+
+# How long should we display this motd before cycling to the next one? (measured in ticks)
+motd-duration: 100
+
+# Use %n to break onto the second line
+motds:
+  - '<g:#8A2387:#E94057:#F27121>An example hex MOTD!%n<r:0.5>Now with more colors!'
+  - '<g:#8A2387:#E94057:#F27121>A second example hex MOTD!%n<r:0.8>&o&lNow with EVEN MORE colors!'

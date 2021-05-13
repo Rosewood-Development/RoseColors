@@ -1,0 +1,10 @@
+# Set to true to actually use the below motd settings
+change-motd: false
+
+# How long should we display this motd before cycling to the next one? (measured in milliseconds)
+motd-duration: 5000
+
+# Use %n to break onto the second line
+motds:
+  - '<g:#8A2387:#E94057:#F27121>An example hex MOTD!%n<r:0.5>Now with more colors!'
+  - '<g:#8A2387:#E94057:#F27121>A second example hex MOTD!%n<r:0.8>&o&lNow with EVEN MORE colors!'
